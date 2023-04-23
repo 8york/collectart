@@ -1,0 +1,71 @@
+body{
+    background-color: rgb(1, 26, 20);
+    color:bisque;
+}
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+    /* transform: translateX(-40%); */
+}
+
+.thumbnail {
+    height: 14em;
+    padding:.3em;
+}
+
+
+nav a{
+    color: rgb(245, 100, 226);
+    text-decoration: none;
+    font-size: 2em;
+    padding: .2em;
+}
+
+nav a:hover {
+    position: relative;
+    bottom: .2em;
+}
+
+h1{
+    font-size: 3.5em;
+    text-align: center;
+}
+li{
+    list-style: none;
+    font-size: 3em;
+}
+
+.bigimage {
+    max-width:40em;
+    transform: translateX(12em);
+}
+
+.work_description{
+    transform: translateX(12em);
+}
+
+.wrap{
+    display: flex;
+    align-items: center;
+    gap:2em;
+}
+
+.new_work {
+    text-align: center;
+}
+.label {
+    font-size: 2em;
+    display: block;
+    padding:.3em;
+}
+ input{
+    padding: .5em 0;
+    width: 20em;
+    font-size: 1.5em;
+ }
+
+ .submit{
+    font-size: 2em;
+    width: 8em;s
+ }

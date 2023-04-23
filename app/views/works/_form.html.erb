@@ -1,0 +1,21 @@
+<%= form_for @work do |f| %>
+    
+        <%= f.label :IMAGE, :class => 'label' %>
+        <%= f.text_field :image, required: true %>
+        
+        <%= f.label :TITLE, :class => 'label'%>
+        <%= f.text_field :title %>
+   
+        <%= f.label :HEIGHT, :class =>'label'%>
+        <%= f.text_field :height %>
+
+        <%= f.label :WIDTH, :class => 'label' %>
+        <%= f.text_field :width %>
+
+        <%= f.label :MEDIUM, :class => 'label' %>
+        <%= f.text_field :medium %>
+
+       
+        <%= f.submit %>
+
+<% end %>

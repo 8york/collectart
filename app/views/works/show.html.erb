@@ -1,0 +1,23 @@
+<h1><%= @work.title %></h1>
+
+ <%= image_tag @work.image, :class => "bigimage" %>
+
+<ul class="work_description">
+    <li>WHO: <%= @work.user_id %></li>
+    <%# needs testing with empty entry %>
+    <% unless !@work.height.present?  %>
+        <li>HEIGHT: <%= @work.height %></li>
+    <% end %>
+    <% unless !@work.width.present?%>
+        <li>WIDTH: <%= @work.width %></li>
+    <% end %>
+    <%# how to set default value of unknown if no entry is made %>
+    <li>MEDIUM: <%= @work.medium || "unknown" %></li> 
+</ul>
+
+<div class="controller">
+    <%# <% if work.user_id == current_user %>
+    <%= link_to "edit", edit_work_path(@work)%>
+    <%= link_to "delete", @work, :method => :delete, :data => { :confirm => 'are you sure?'} %>
+    <%# <% end %>
+</div>

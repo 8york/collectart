@@ -7,9 +7,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="collectart.css">
   </head>
 
   <body>
+    <div class="container">
+      <nav>
+        <%= link_to "home", root_path  %>
+        <%= link_to "all works", works_path %>
+        <%= link_to "add your work", new_work_path %>
+      </nav>
     <%= yield %>
+    </div>
   </body>
 </html>
