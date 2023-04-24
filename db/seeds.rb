@@ -22,4 +22,8 @@ w9 = Work.create(:user_id => amanda.id, :image_url => 'https://www.mandawolf.com
 
 puts "#{ Work.count } works created."
 
+Like.destroy_all
 
+l1 = Like.create(:user_id => jamie.id, :work_id => w6.id, :rating => 4)
+l2 = Like.create(:user_id => jamie.id, :work_id => w9.id, :rating => 5)
+l3 = Like.create(:user_id => lincoln.id, :work_id => w6.id, :rating => 4)

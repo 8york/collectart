@@ -32,6 +32,12 @@ class WorksController < ApplicationController
     redirect_to works_path
   end
 
+  def like
+    @work = Work.find(params[:id])
+    @work.update(likes: @work.likes + 1)
+    redirect_to @work
+  end
+
   private
   def work_params
     params.require(:work).permit(:user_id, :image_url, :title, :height, :width, :medium)

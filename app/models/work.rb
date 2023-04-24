@@ -1,4 +1,4 @@
 class Work < ApplicationRecord
-    belongs_to :user, :optional => true
-    # belongs_to :likes, :optional => true
+    belongs_to :user, :optional => false
+    has_many :likes
 end
