@@ -34,6 +34,6 @@ class WorksController < ApplicationController
 
   private
   def work_params
-    params.require(:work).permit(:image, :title, :height, :width, :medium)
+    params.require(:work).permit(:user_id, :image_url, :title, :height, :width, :medium)
   end
 end
