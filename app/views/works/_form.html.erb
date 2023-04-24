@@ -1,7 +1,10 @@
 <%= form_for @work do |f| %>
-    
+        
+        <%= f.label :WHO, :class => 'label' %>
+        <%= f.text_field :user, required: true %>
+
         <%= f.label :IMAGE, :class => 'label' %>
-        <%= f.text_field :image, required: true %>
+        <%= f.text_field :image_url, required: true %>
         
         <%= f.label :TITLE, :class => 'label'%>
         <%= f.text_field :title %>

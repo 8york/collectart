@@ -1,7 +1,6 @@
 class User < ApplicationRecord
-    # has_secure_password
-    # validates :email, :uniqueness => true, :presence => true
-    has_many :likes
+    has_secure_password
+    validates :email, :uniqueness => true, :presence => true
     has_many :works
-
+    has_many :likes
 end

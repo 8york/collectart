@@ -1,9 +1,9 @@
 <h1><%= @work.title %></h1>
 
- <%= image_tag @work.image, :class => "bigimage" %>
+ <%= image_tag @work.image_url, :class => "bigimage" %>
 
 <ul class="work_description">
-    <li>WHO: <%= @work.user_id %></li>
+    <li>WHO: <%= @work.user.name %></li>
     <%# needs testing with empty entry %>
     <% unless !@work.height.present?  %>
         <li>HEIGHT: <%= @work.height %></li>
