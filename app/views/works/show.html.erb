@@ -4,20 +4,23 @@
 
 <ul class="work_description">
     <li>WHO: <%= @work.user.name %></li>
-    <%# needs testing with empty entry %>
-    <% unless !@work.height.present?  %>
+    <% if @work.height.present?  %>
         <li>HEIGHT: <%= @work.height %></li>
+    <% else %>
+        <li>HEIGHT: <%= "Unknown" %></li>
     <% end %>
-    <% unless !@work.width.present?%>
+    <% if @work.width.present?%>
         <li>WIDTH: <%= @work.width %></li>
+    <% else %>
+        <li>WIDTH: <%= "Unknown" %></li>
     <% end %>
-    <%# how to set default value of unknown if no entry is made %>
-    <li>MEDIUM: <%= @work.medium || "unknown" %></li> 
+    <li>MEDIUM: <%= @work.medium %></li> 
 </ul>
 
 <div class="controller">
-     <%# <% if @current_user ==  %>
+    <%# <% if @current_user == User.find_by(:id => session[:user_id]) %>
+     <% if @current_user.id == User.find_by(id: session[:user_id]) %>
     <%= link_to "edit", edit_work_path(@work), class: 'btn'%>
     <%= link_to "delete", @work, :method => :delete, :data => { :confirm => 'are you sure?'}, class: 'btn'%>
-     <%# <% end %>
+     <% end %>
 </div>
