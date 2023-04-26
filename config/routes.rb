@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root :to => 'pages#home'
   resources :users, :only => [:index, :new, :create]
   resources :works
-  resources :likes
+  # the following creates routes like: /works/:id/likes/new
   resources :works do 
     resources :likes, only: [:new, :create]
   end

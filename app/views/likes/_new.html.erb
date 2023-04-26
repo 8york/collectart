@@ -3,7 +3,14 @@
         <%= form_for [@work, @like] do |form| %>
             <%= form.submit "like" , class: 'btn'%>
         <% end %>
-    <% end %>
+    <% end%>
+   
     <%# todo: allow them to unlike the work if they have already liked it %>
+    <% if @current_user_has_already_liked%>
+        <%= form_for [@work, @like] do |form| %>
+                <%= form.submit "like" , class: 'btn'%>
+        <% end %>
+     <% end %>
+        
     <p><%= pluralize(@like_count, "like") %></p>
 </div>
