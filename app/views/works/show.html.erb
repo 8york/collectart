@@ -1,7 +1,6 @@
-
 <h1><%= @work.title %></h1>
 
-<%= image_tag @work.image_url, :class => "bigimage" %>
+<%= cl_image_tag @work.image_url, :class => "bigimage" %>
 
 <ul class="work_description">
         <li>WHO: <%= @work.user.name %></li>
@@ -19,19 +18,12 @@
 </ul>
 <div class="controller">
     <% if @current_user == @work.user %>
-    <%= link_to "edit", edit_work_path(@work), class: 'btn'%>
+    <%= link_to "edit", edit_work_path(@work), :class => 'btn'%>
     <%= link_to "delete", @work, :method => :delete, :data => { :confirm => 'are you sure?'}, class: 'btn'%>
     <% end %>
 </div>
 
-<div class="like">
+<%# <%= render :partial => 'likes/new' %>
+<%= render partial: 'likes/new' %>
 
-<% unless @current_user == @work.user %>
-    <%= form_for([@work]) do |form| %>
-        <%= form.hidden_field :work_id, value: @work.id %>
-        <%= form.submit "like" , class: 'btn'%>
-        <% end %>
-        <p><%= pluralize(@like_count, "like") %></p>
-    <% end %>
-</div>
 

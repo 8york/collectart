@@ -1,18 +1,3 @@
-header{
-    display: flex;
-    gap:.3em;
-    justify-content: center;
-}
 
-.welcome{
-    background-color: rgb(228, 153, 22);
-    padding: .2em;
-    border-radius: 50%;
-}
 
-.welcometwo{
-    background-color: rgb(97, 25, 169);
-    padding: .2em;
-    border-radius: 50%;
-}
 

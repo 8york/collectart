@@ -1,25 +1,46 @@
 
 body{
-    /* background-color: rgb(46, 119, 102); */
     background-image: linear-gradient(to right bottom, #378e46, #858123, #b46d38, #c65f69, #b1669d);
     color:bisque;
 }
 
+header{
+    display: flex;
+    gap:.3em;
+    justify-content: center;
+}
+
+.welcome{
+    background-color: rgb(228, 153, 22);
+    padding: .2em;
+    border-radius: 50%;
+}
+
+.welcometwo{
+    background-color: rgb(97, 25, 169);
+    padding: .2em;
+    border-radius: 50%;
+}
 .container{
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
 }
 
-    .show-wrap{
+.space{
+    height: 50vh;
+}
+.show-wrap{
         display: block;
         width: 70%;
         /* transform: translateX(30%); */
     }
-    .thumbnail {
+.thumbnail {
         display: block;
         width: 25em;
-        padding:.3em;    
+        padding:.3em;
+        /* background-image: url('https://res.cloudinary.com/<dceksz7xb>/image/upload/<122591316153756>.jpg'); */
+             
     }
 
 @media (min-width: 500px){
@@ -187,9 +208,9 @@ li{
     color:teal;
 }
 footer{
-    position: fixed;
-    bottom: 0;
-    left:0;
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left:0; */
     color: rgb(214, 165, 18);
     padding: 2em;
 }
