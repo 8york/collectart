@@ -5,8 +5,11 @@ Rails.application.routes.draw do
   root :to => 'pages#home'
   resources :users, :only => [:index, :new, :create]
   resources :works
-  # resources :works do
-  #   put 'like', on
+  #nested routes
+  resources :works do 
+    resources :likes, only: [:create]
+  end
+  # sing up and login and logout
   get '/new_user', to: "users#new"
   post '/new_user', to: "users#create"
   get '/login' => 'session#new'

@@ -1,31 +1,82 @@
 
 body{
-    background-color: rgb(1, 26, 20);
+    /* background-color: rgb(46, 119, 102); */
+    background-image: linear-gradient(to right bottom, #378e46, #858123, #b46d38, #c65f69, #b1669d);
     color:bisque;
 }
 
 .container{
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
-    /* transform: translateX(-40%); */
+    position: relative;
 }
 
-.thumbnail {
-    height: 14em;
-    padding:.3em;
-}
+    .show-wrap{
+        display: block;
+        width: 70%;
+        /* transform: translateX(30%); */
+    }
+    .thumbnail {
+        display: block;
+        width: 25em;
+        padding:.3em;    
+    }
 
+@media (min-width: 500px){
+    .thumbnail{
+        display: block;
+        max-width: 25em;
+    }
+}
+    
+@media (min-width: 650px){
+   .show-wrap{ 
+        width:100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1em;      
+   }
+
+.show-wrap a{
+    background-color: rgb(243, 242, 240);
+   }
+
+.thumbnail{
+        max-width: 15em;
+ }
+}
 
 nav a{
-    color: rgb(161, 13, 141);
+    color: rgb(237, 147, 50);
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.2em;
     padding: .2em;
+    font-weight: bold;
 }
 
 a:hover {
     position: relative;
     bottom: .2em;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .navigation{
+        display: inline-block;
+        width: 60%;
+       
+    }
+    nav a {
+        font-size: 2em;
+    }
+   .logout {
+    width:40%;
+   } 
 }
 
 h1{
@@ -40,6 +91,7 @@ li{
 .bigimage {
     max-width:40em;
     transform: translateX(12em);
+    box-shadow: 10px 7px 7px rgb(35, 52, 35);
 }
 
 .work_description{
@@ -65,6 +117,7 @@ li{
     width: 20em;
     font-size: 1.5em;
     border-radius: .5em;
+    text-align: center;
  }
 
  .submit{
@@ -87,16 +140,25 @@ li{
 
 .btn {
     width: 5em;
-    background-color: rgb(177, 144, 60);
+    background-color: rgb(237, 147, 50);
+    border: solid rgb(237, 147, 50) ;
 }
 
 .controller{
     text-align: center;
 }
 
-.control-btn{
+.form-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-btn{
     width: 7em;
-    background-color: rgb(177, 144, 60);
+    background-color: rgb(237, 147, 50);
+    margin-top: .5em;
+    color: rgb(161, 13, 141);
+    ; 
 }
 .controller a{
     color: rgb(161, 13, 141);
@@ -104,7 +166,30 @@ li{
     font-size: 2em;
     padding: .2em;
     display: inline-block;
-   text-align: center;
-   border-radius: .5em;
-   margin-right: .4em;
+    text-align: center;
+    border-radius: .5em;
+    margin-right: .4em;
+}
+
+.like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8em;
+}
+.like .btn {
+    padding:.2em;
+    color: rgb(161, 13, 141);
+}
+.like .btn:hover {
+    position: relative;
+    bottom: .2em;
+    color:teal;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    color: rgb(214, 165, 18);
+    padding: 2em;
 }

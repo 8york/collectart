@@ -12,7 +12,7 @@ class SessionController < ApplicationController
   end
 end
 
-#is it logout or delete the login details?
+#is it logout?
   def destroy
     session[:user_id] = nil
     redirect_to login_path

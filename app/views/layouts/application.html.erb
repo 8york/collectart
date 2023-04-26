@@ -13,15 +13,13 @@
   <body>
     <div class="container">
       <nav>
-        
+        <div class="navigation">
         <% if @current_user.present? %>
-          <%# <% if @current_user.admin? %>
-            <%# <%= link_to "All users", users_path %>
-          <%# <% end%>
           <%= link_to "home", root_path  %>
-          <%= link_to "logout", login_path, :method => 'delete' %>
           <%= link_to "all works", works_path %>
           <%= link_to "add your work", new_work_path %>
+          </div>
+          <%= link_to "logout as #{ @current_user.name }" , login_path, :method => 'delete', class: "logout" %>
         <% else %>
         <%= link_to "sign up", new_user_path %>
         <%= link_to "sign in", login_path %>
@@ -29,5 +27,6 @@
       </nav>
     <%= yield %>
     </div>
+    
   </body>
 </html>

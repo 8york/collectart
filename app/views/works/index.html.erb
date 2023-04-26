@@ -1,6 +1,7 @@
 <h1 class="indexhone" >LOOOOOOKKKK</h1>
-
+<div class="show-wrap">
 <% @works.each do |work| %>
     <%# <%=link_to work.title, work %>
     <%= link_to image_tag(work.image_url, :class => 'thumbnail'), work %>
 <% end %>
+</div>

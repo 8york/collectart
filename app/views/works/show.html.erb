@@ -1,26 +1,37 @@
+
 <h1><%= @work.title %></h1>
 
- <%= image_tag @work.image_url, :class => "bigimage" %>
+<%= image_tag @work.image_url, :class => "bigimage" %>
 
 <ul class="work_description">
-    <li>WHO: <%= @work.user.name %></li>
-    <% if @work.height.present?  %>
-        <li>HEIGHT: <%= @work.height %></li>
-    <% else %>
-        <li>HEIGHT: <%= "Unknown" %></li>
-    <% end %>
-    <% if @work.width.present?%>
-        <li>WIDTH: <%= @work.width %></li>
-    <% else %>
-        <li>WIDTH: <%= "Unknown" %></li>
-    <% end %>
-    <li>MEDIUM: <%= @work.medium %></li> 
+        <li>WHO: <%= @work.user.name %></li>
+         <% if @work.height.present?  %>
+             <li>HEIGHT: <%= @work.height %></li>
+        <% else %>
+            <li>HEIGHT: <%= "Unknown" %></li>
+        <% end %>
+        <% if @work.width.present?%>
+             <li>WIDTH: <%= @work.width %></li>
+        <% else %>
+             <li>WIDTH: <%= "Unknown" %></li>
+         <% end %>
+        <li>MEDIUM: <%= @work.medium %></li> 
 </ul>
-
 <div class="controller">
-    <%# <% if @current_user == User.find_by(:id => session[:user_id]) %>
-     <% if @current_user.id == User.find_by(id: session[:user_id]) %>
+    <% if @current_user == @work.user %>
     <%= link_to "edit", edit_work_path(@work), class: 'btn'%>
     <%= link_to "delete", @work, :method => :delete, :data => { :confirm => 'are you sure?'}, class: 'btn'%>
-     <% end %>
+    <% end %>
 </div>
+
+<div class="like">
+
+<% unless @current_user == @work.user %>
+    <%= form_for([@work]) do |form| %>
+        <%= form.hidden_field :work_id, value: @work.id %>
+        <%= form.submit "like" , class: 'btn'%>
+        <% end %>
+        <p><%= pluralize(@like_count, "like") %></p>
+    <% end %>
+</div>
+
