@@ -14,6 +14,13 @@ Development of Collectart uses three models, User model, Work model and Like mod
 
 ## HOW TO USE THIS PROJECT.
 - COLLECTART was developed with Ruby on rails version 5.2.8.1.
-- Currently, it includes three models, to expand this project more models can be added by running commands
+- Currently, it has three models, to expand this project more models can be added.
+- To run this app, three gems have been installed to run this app, which are  gem 'jquery-rails', gem 'cloudinary' and gem 'bootstrap'
+- Cloudinary enables the users to upload their file from their local computer to Collectart app. Credentials can be found in the Cloudinary.yml.
+
+##Credits
+Collectart was built as Project 1 for Software Engineering Immersive courser at General Assembly. Great support and assitance from the teaching team, cohort and friends have brouhgt this project alive.
+
+
 
 
