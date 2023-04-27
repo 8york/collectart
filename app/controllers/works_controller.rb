@@ -28,8 +28,9 @@ class WorksController < ApplicationController
       req = Cloudinary::Uploader.upload(params[:file])
       work.image_url = req["public_id"]
       work.update work_params
+      work.save  
     end 
-    redirect_to work
+    redirect_to work_path
   end
 
   def show
