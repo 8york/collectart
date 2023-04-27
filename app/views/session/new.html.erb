@@ -3,7 +3,7 @@
 <% if flash[:error]%>
 <h2><%= flash[:error] %></h2>
 <% end %>
-
+<div class="signin">
 <%= form_tag login_path do %>
     <%= label_tag :email, nil, :class => 'label' %>
     <%= email_field_tag :email %>
@@ -13,3 +13,5 @@
 
     <%= submit_tag "sign in", class: "btn" %>
 <% end %>
+</div>
+

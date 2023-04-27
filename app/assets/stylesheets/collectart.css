@@ -4,13 +4,18 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Righteous', cursive;
 font-family: 'Rubik', sans-serif; */
 body{
-    background-image: linear-gradient(to top, rgb(172, 76, 172), rgb(224, 113, 49), rgb(38, 108, 108), rgb(205, 178, 26));
-    color:rgb(198, 196, 255);
+    background-image: linear-gradient(to left, rgb(172, 76, 172), rgb(224, 113, 49), rgb(38, 108, 108), rgb(205, 178, 26));
+    color:rgb(182, 179, 244);
     font-family: 'Poppins', sans-serif;
 }
 
+.signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 nav a{
-    color: rgb(50, 122, 237);
+    color: rgb(135, 22, 90);
     text-decoration: none;
     font-size: 1.2em;
     padding: .2em;
@@ -20,7 +25,7 @@ nav a{
 a:hover {
     position: relative;
     bottom: .2em;
-    color: rgb(200, 55, 142);
+    color: rgb(50, 122, 237);
 }
 
 .navigation{
@@ -33,12 +38,11 @@ nav a{
 }
 
 .logout{
-    color: rgb(200, 55, 142);
+    color: rgb(50, 122, 237);
 }
 
 .logout:hover{
-    color: rgb(50, 122, 237);
-
+    color: rgb(135, 22, 90);
 }
 
 @media (min-width: 700px) {
@@ -165,8 +169,7 @@ footer p{
 }
     
 @media (min-width: 650px){
-   .index-wrap{ 
-        
+   .index-wrap{  
         width:100%;
         display: flex;
         justify-content: center;
@@ -183,17 +186,21 @@ footer p{
  }
 }
 
-
 .show-wrap{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 h1{
-    font-size: 5em;
+    font-size: 3em;
     text-shadow: 3px 5px 4px rgb(75, 25, 75);
-
     text-align: center;
+}
+
+@media (min-600) {
+    h1{
+        font-size: 5em;
+    }
 }
 
 .bigimage {
@@ -201,8 +208,27 @@ h1{
     box-shadow: 10px 7px 7px rgb(35, 52, 35);
 }
 
+.artist {
+    text-align: center;
+}
 .work_description li {
-    font-size: 2em;
+    font-size: 1.5em;
+    color: rgb(98, 16, 116);
+}
+
+.work_description .height::before{
+    content: "HEIGHT: ";
+    color: rgb(237, 147, 50);
+}
+
+.work_description .width::before{
+    content: "WIDTH: ";
+    color: rgb(237, 147, 50);
+}
+
+.work_description .medium::before{
+    content: "MEDIUM: ";
+    color: rgb(237, 147, 50);
 }
 @media (min-width: 600px) {
     
@@ -223,6 +249,9 @@ h1{
     gap:2em;
 }
 
+#new_work .input {
+
+}
 .new_work {
     text-align: center;
 }
@@ -233,12 +262,13 @@ h1{
     padding:.3em;
 }
 
- input, select {
+input, select {
     padding: .5em 0;
     width: 20em;
     font-size: 1.5em;
     border-radius: .5em;
     text-align: center;
+    border: hidden;
  }
 
  .submit{
@@ -299,18 +329,19 @@ h1{
     gap: .8em;
 }
 .like .btn {
-    padding:.2em;
+    padding: .7em;
     color: rgb(161, 13, 141);
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
 }
 .like .btn:hover {
     position: relative;
     bottom: .2em;
-    color:teal;
+    color:rgb(6, 63, 63);
 }
 footer{
-    /* position: fixed; */
-    /* bottom: 0; */
-    /* left:0; */
     color: rgb(214, 165, 18);
     padding: 2em;
 }

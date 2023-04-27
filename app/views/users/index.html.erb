@@ -1,8 +1,9 @@
 <%# change the conditionals later so this is only accessible for admin to see the singed up users %>
 
 <h1>all users</h1>
-
+<div class="signin">
 <% @users.each do |user| %>
     <p><%= user.name %></p>
     <p><%= user.email %></p>
 <% end %>
+</div>

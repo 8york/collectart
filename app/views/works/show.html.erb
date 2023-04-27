@@ -7,18 +7,18 @@
     <%= cl_image_tag @work.image_url, class: "bigimage" %>
     
     <ul class="work_description">
-        <li><%= @work.user.name %></li>
+        <li class ="artist"><%= @work.user.name %></li>
          <% if @work.height.present?  %>
-             <li>HEIGHT: <%= @work.height %></li>
+             <li class ="height"> <%= @work.height %></li>
         <% else %>
-            <li>HEIGHT: <%= "Unknown" %></li>
+            <li class = "height"> <%= "Unknown" %></li>
         <% end %>
         <% if @work.width.present?%>
-             <li>WIDTH: <%= @work.width %></li>
+             <li class ="width" ><%= @work.width %></li>
         <% else %>
-             <li>WIDTH: <%= "Unknown" %></li>
+             <li class ="width"><%= "Unknown" %></li>
          <% end %>
-        <li>MEDIUM: <%= @work.medium %></li> 
+        <li class ="medium"> <%= @work.medium %></li> 
         </ul>
 </div>
 <div class="controller">
