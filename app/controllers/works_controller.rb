@@ -8,13 +8,13 @@ class WorksController < ApplicationController
   end
 
   def create  
+    work = Work.new work_params
+    work.user_id = @current_user.id
     if params[:file].present?
       req = Cloudinary::Uploader.upload(params[:file])
-      work = Work.new work_params
-      work.user_id = @current_user.id
       work.image_url = req["public_id"]
-      work.save
     end
+    work.save
     redirect_to work
   end
   
