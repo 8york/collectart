@@ -7,9 +7,10 @@ class WorksController < ApplicationController
     @work = Work.new
   end
 
-  def create  
+  def create
     work = Work.new work_params
     work.user_id = @current_user.id
+    #if image exsits, use uplode from cloudinary, it is a required field but currently not working, may need JS?
     if params[:file].present?
       req = Cloudinary::Uploader.upload(params[:file])
       work.image_url = req["public_id"]
@@ -24,12 +25,13 @@ class WorksController < ApplicationController
 
   def update
     work = Work.find params[:id]
+    work.update work_params
+    
     if params[:file].present?
       req = Cloudinary::Uploader.upload(params[:file])
-      work.image_url = req["public_id"]
-      work.update work_params
-      work.save  
+      work.image_url = req["public_id"]  
     end 
+    work.save  
     redirect_to work_path
   end
 

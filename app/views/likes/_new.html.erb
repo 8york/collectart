@@ -1,9 +1,12 @@
 <div class="like">
+<%# only show like if the current user is not the user associated to the work and current user has not liked it %>
     <% if @current_user != @work.user && !@current_user_has_already_liked %>
         <%= link_to "like", work_likes_path(@work.id), :method => :create, class: 'btn'%>
     <% end%>
+    <%# if the current user is not the user with the workid, and current user has liked it already show the btn %>
     <% if @current_user != @work.user &&  @current_user_has_already_liked %>
         <%= link_to "unlike", work_like_path(@work.id, @like.id), :method => :delete, class: 'btn'%>
-    <% end %>    
+    <% end %> 
+       <%# counter for likes  %>
     <p><%= pluralize(@likes_count, "like") %></p>
 </div>
