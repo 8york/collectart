@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :works
   # the following creates routes like: /works/:id/likes/new
   resources :works do 
-    resources :likes, only: [:new, :create]
+    resources :likes, only: [:create, :destroy]
   end
   # sing up and login and logout
   get '/new_user', to: "users#new"

@@ -1,7 +1,70 @@
 
+/* font-family: 'Luckiest Guy', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Rubik', sans-serif; */
 body{
-    background-image: linear-gradient(to right bottom, #378e46, #858123, #b46d38, #c65f69, #b1669d);
-    color:bisque;
+    background-image: linear-gradient(to top, rgb(172, 76, 172), rgb(224, 113, 49), rgb(38, 108, 108), rgb(205, 178, 26));
+    color:rgb(198, 196, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+nav a{
+    color: rgb(50, 122, 237);
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: .2em;
+    font-weight: bold;
+}
+
+a:hover {
+    position: relative;
+    bottom: .2em;
+    color: rgb(200, 55, 142);
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;   
+}
+
+nav a{
+    font-size: 1em;
+}
+
+.logout{
+    color: rgb(200, 55, 142);
+}
+
+.logout:hover{
+    color: rgb(50, 122, 237);
+
+}
+
+@media (min-width: 700px) {
+    .navigation{
+        display: inline-block;
+    }
+    nav a {
+        font-size: 2em;
+       
+
+    }
+   .logout{
+    margin-left:8em;
+}
+}
+h2{
+    font-size: 5em;
+    text-shadow: 3px 5px 4px rgb(57, 17, 57);
+    text-align: center;
+}
+
+.greet {
+    font-size: 3em;
+    font-weight: bold;
+    color: rgb(200, 55, 142);
+    text-align: center;
 }
 
 main{
@@ -12,14 +75,14 @@ main{
 
 
 .welcome {
-    background-color: rgb(228, 153, 22);
+    background-color: rgb(50, 122, 237);
         font-size: 2em;
         padding: .2em;
         border-radius: 50%;
 }
 
 .welcometwo{
-    background-color: rgb(97, 25, 169);
+    background-color: rgb(182, 58, 132);
         font-size: 2em;
         padding: .2em;
         border-radius: 50%;
@@ -50,7 +113,7 @@ main{
 }
 @media (min-width: 800px) {
     .welcome{
-        background-color: rgb(228, 153, 22);
+        background-color: rgb(50, 122, 237);
         font-size: 7em;
         padding: .2em;
         border-radius: 50%;
@@ -59,7 +122,7 @@ main{
     }
 
     .welcometwo{
-        background-color: rgb(97, 25, 169);
+        background-color: rgb(182, 58, 132);
         font-size: 7em;
         padding: .2em;
         border-radius: 50%;
@@ -72,25 +135,26 @@ main{
     position: relative;
 }
 
-h2{
-    font-size: 3em;
-    text-shadow: 3px 5px 4px rgb(57, 17, 57);
-}
-
 p{ 
     font-size: 2em;
+    margin-left: 2em;
+    /* text-align: center; */
 }
-.show-wrap{
+
+footer p{
+    font-size: 1em;
+    color:rgb(97, 25, 169);
+    font-weight: bold;
+}
+.index-wrap {
         display: block;
         width: 70%;
-        /* transform: translateX(30%); */
-    }
+        margin: 0 auto;
+}
 .thumbnail {
         display: block;
         width: 25em;
         padding:.3em;
-        /* background-image: url('https://res.cloudinary.com/<dceksz7xb>/image/upload/<122591316153756>.jpg'); */
-             
     }
 
 @media (min-width: 500px){
@@ -101,7 +165,8 @@ p{
 }
     
 @media (min-width: 650px){
-   .show-wrap{ 
+   .index-wrap{ 
+        
         width:100%;
         display: flex;
         justify-content: center;
@@ -109,7 +174,7 @@ p{
         gap: 1em;      
    }
 
-.show-wrap a{
+.index-wrap a{
     background-color: rgb(243, 242, 240);
    }
 
@@ -118,55 +183,38 @@ p{
  }
 }
 
-nav a{
-    color: rgb(237, 147, 50);
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: .2em;
-    font-weight: bold;
-}
 
-a:hover {
-    position: relative;
-    bottom: .2em;
-}
-
-.navigation{
+.show-wrap{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-
-@media (min-width: 600px) {
-    .navigation{
-        display: inline-block;
-        width: 60%;
-       
-    }
-    nav a {
-        font-size: 2em;
-    }
-   .logout {
-    width:40%;
-   } 
-}
-
 h1{
-    font-size: 3.5em;
+    font-size: 5em;
+    text-shadow: 3px 5px 4px rgb(75, 25, 75);
+
     text-align: center;
-}
-li{
-    list-style: none;
-    font-size: 3em;
 }
 
 .bigimage {
-    max-width:40em;
-    transform: translateX(12em);
+    max-width: 20em;
     box-shadow: 10px 7px 7px rgb(35, 52, 35);
 }
 
-.work_description{
-    transform: translateX(12em);
+.work_description li {
+    font-size: 2em;
+}
+@media (min-width: 600px) {
+    
+    .bigimage {
+        max-width:40em;
+    }
+
+    .work_description li{
+        list-style: none;
+        font-size: 3em;
+        font-weight: 700;
+    }
 }
 
 .wrap{
@@ -178,12 +226,14 @@ li{
 .new_work {
     text-align: center;
 }
+
 .label {
     font-size: 2em;
     display: block;
     padding:.3em;
 }
- input, select{
+
+ input, select {
     padding: .5em 0;
     width: 20em;
     font-size: 1.5em;

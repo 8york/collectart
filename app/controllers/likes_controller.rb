@@ -11,18 +11,12 @@ class LikesController < ApplicationController
         end
     end
 
-    # def update
-    # like = Like.find params[:id]
-    # like.update like_params
-    # redirect_to work
-    # end
-
-    # def show
-    #     @work.Work.find params[:id]
-    #     @like_count = @work.likes.count
-    #     redirect_to @work
-    # end
-
+    def destroy
+        like = Like.find params[:id]
+        like.destroy
+        redirect_to work_path params[:work_id]
+      end
+    
 end
 
 private

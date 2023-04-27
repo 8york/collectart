@@ -1,9 +1,13 @@
-<h1><%= @work.title %></h1>
-
-<%= cl_image_tag @work.image_url, :class => "bigimage" %>
-
-<ul class="work_description">
-        <li>WHO: <%= @work.user.name %></li>
+<div class="show-wrap">
+    <% if @work.title.present? %>
+        <h1 class ="hone"><%= @work.title %></h1>
+    <% else %>
+        <h1 class ="hone"><%= "Untitled" %></h1>
+    <% end %>
+    <%= cl_image_tag @work.image_url, class: "bigimage" %>
+    
+    <ul class="work_description">
+        <li><%= @work.user.name %></li>
          <% if @work.height.present?  %>
              <li>HEIGHT: <%= @work.height %></li>
         <% else %>
@@ -15,7 +19,8 @@
              <li>WIDTH: <%= "Unknown" %></li>
          <% end %>
         <li>MEDIUM: <%= @work.medium %></li> 
-</ul>
+        </ul>
+</div>
 <div class="controller">
     <% if @current_user == @work.user %>
     <%= link_to "edit", edit_work_path(@work), :class => 'btn'%>

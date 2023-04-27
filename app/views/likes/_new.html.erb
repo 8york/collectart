@@ -1,16 +1,9 @@
 <div class="like">
-    <% unless @current_user == @work.user || @current_user_has_already_liked %>
-        <%= form_for [@work, @like] do |form| %>
-            <%= form.submit "like" , class: 'btn'%>
-        <% end %>
+    <% if @current_user != @work.user && !@current_user_has_already_liked %>
+        <%= link_to "like", work_likes_path(@work.id), :method => :create, class: 'btn'%>
     <% end%>
-   
-    <%# todo: allow them to unlike the work if they have already liked it %>
-    <% if @current_user_has_already_liked%>
-        <%= form_for [@work, @like] do |form| %>
-                <%= form.submit "like" , class: 'btn'%>
-        <% end %>
-     <% end %>
-        
-    <p><%= pluralize(@like_count, "like") %></p>
+    <% if @current_user != @work.user &&  @current_user_has_already_liked %>
+        <%= link_to "unlike", work_like_path(@work.id, @like.id), :method => :delete, class: 'btn'%>
+    <% end %>    
+    <p><%= pluralize(@likes_count, "like") %></p>
 </div>

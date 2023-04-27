@@ -7,6 +7,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;900&family=Righteous&family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
     <%= cloudinary_js_config %>
     <link rel="stylesheet" href="/assets/collectart.css">
   </head>
@@ -19,8 +22,8 @@
           <%= link_to "home", root_path  %>
           <%= link_to "all works", works_path %>
           <%= link_to "add your work", new_work_path %>
-          </div>
-          <%= link_to "logout as #{ @current_user.name }" , login_path, :method => 'delete', class: "logout" %>
+          <%= link_to "logout" , login_path, :method => 'delete', class: "logout" %>
+        </div>
         <% else %>
         <%= link_to "sign up", new_user_path %>
         <%= link_to "sign in", login_path %>
