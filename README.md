@@ -9,9 +9,16 @@ Collectart is an app develped for people to share their art/craft works. It aims
 - Cloudinary enables the users to upload their file from their local computer to Collectart app. Credentials can be found in the Cloudinary.yml.
 
 ## PLANNING
-This app has 3 models currently. Below is the model framework
-![model wireframe] (model wireframe.png)
+This app has 3 models currently, users, works and likes. likes model is associated with both users and works
 
+## Bugs
+- No error message shows when an user's login fails.
+
+## FUTURE FEATURE
+- More functionalities can be added to the app to make it more interactive. For example, comment or a platform where the users can communicate/swap works.
+
+## LESSONS LEARNT
+The whole project was a challenging for me to use the principles of CRUD system and Ruby on rails. The importance of using console to debug to find out the cause of the bug.
 ## Credits
 Collectart was built as Project 1 for Software Engineering Immersive courser at General Assembly. Great support and assitance from the teaching team, cohort and friends have brouhgt this project alive.
 
