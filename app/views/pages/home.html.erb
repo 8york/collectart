@@ -1,6 +1,4 @@
-<% unless @current_user.present?%>
-
-<% end %>
+<p>WELCOME to artcollect, please sing up or sing in</p>
 <% if @current_user.present? %>
     <p class ="greet">HELLO <%= @current_user.name %></h2>
             <h2>GOT ANY WORKS? SHOW THEM OFF!</h2>
@@ -9,7 +7,8 @@
     </main>
     <p>This is a site for everyone who makes things. No bias on medium, no bias on technique, no bias on length of your practice. If you have anything that you made and want to share, this is the place.</p>
 
+
+    <footer>
+        <p>Collectart woud like to acknowledge the Traditional Owner and Custodians of the land on which we live, the peoples of the Kulin Nation. We pay the respect to their elders past and peresent.</h2>
+    </footer>
 <% end%>
-<footer>
-    <p>Collectart woud like to acknowledge the Traditional Owner and Custodians of the land on which we live, the peoples of the Kulin Nation. We pay the respect to their elders past and peresent.</h2>
-</footer>
