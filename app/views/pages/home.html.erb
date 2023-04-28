@@ -1,4 +1,8 @@
-<p>WELCOME to artcollect, please sing up or sing in</p>
+<% unless @current_user.present?%>
+
+<h2>GOT ANY WORKS? SHOW THEM OFF!</h2>
+<p>WELCOME to artcollect, please sing up or sing in first.</p>
+<% end %>
 <% if @current_user.present? %>
     <p class ="greet">HELLO <%= @current_user.name %></h2>
             <h2>GOT ANY WORKS? SHOW THEM OFF!</h2>
