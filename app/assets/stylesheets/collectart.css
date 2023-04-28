@@ -4,7 +4,7 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Righteous', cursive;
 font-family: 'Rubik', sans-serif; */
 body{
-    background-image: linear-gradient(to left, rgb(172, 76, 172), rgb(224, 113, 49), rgb(38, 108, 108), rgb(205, 178, 26));
+    background-image: linear-gradient(to left, rgb(172, 76, 172), rgb(224, 113, 49), rgb(38, 108, 108), rgb(186, 202, 77));
     color:rgb(182, 179, 244);
     font-family: 'Poppins', sans-serif;
 }
@@ -15,7 +15,7 @@ body{
     align-items: center;
 }
 nav a{
-    color: rgb(135, 22, 90);
+    color: rgb(144, 44, 104);
     text-decoration: none;
     font-size: 1.2em;
     padding: .2em;
@@ -42,7 +42,7 @@ nav a{
 }
 
 .logout:hover{
-    color: rgb(135, 22, 90);
+    color: rgb(144, 44, 104);
 }
 
 @media (min-width: 700px) {
@@ -60,14 +60,14 @@ nav a{
 }
 h2{
     font-size: 5em;
-    text-shadow: 3px 5px 4px rgb(57, 17, 57);
+    text-shadow: 4px 5px 4px rgb(57, 17, 57);
     text-align: center;
 }
 
 .greet {
     font-size: 3em;
     font-weight: bold;
-    color: rgb(200, 55, 142);
+    color: rgb(100, 196, 159);
     text-align: center;
 }
 
@@ -152,7 +152,7 @@ footer p{
 }
 .index-wrap {
         display: block;
-        width: 70%;
+        /* width: 60%; */
         margin: 0 auto;
 }
 .thumbnail {
@@ -193,7 +193,7 @@ footer p{
 }
 h1{
     font-size: 3em;
-    text-shadow: 3px 5px 4px rgb(75, 25, 75);
+    text-shadow: 5px 5px 4px rgb(75, 25, 75);
     text-align: center;
 }
 

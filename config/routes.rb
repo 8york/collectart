@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # get 'session/new'
   # get 'users/new'
   # get 'pages/home'
+  # root :to => 'session#new'
   root :to => 'pages#home'
   resources :users, :only => [:index, :new, :create]
   resources :works
