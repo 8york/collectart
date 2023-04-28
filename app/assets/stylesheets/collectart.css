@@ -4,7 +4,8 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Righteous', cursive;
 font-family: 'Rubik', sans-serif; */
 body{
-    background-image: linear-gradient(to left, rgb(172, 76, 172), rgb(224, 113, 49), rgb(38, 108, 108), rgb(186, 202, 77));
+    /* background-image: linear-gradient(to left, rgb(172, 76, 172), rgb(224, 113, 49), rgb(38, 108, 108), rgb(186, 202, 77)); */
+    background-color: rgb(220, 107, 65);
     color:rgb(182, 179, 244);
     font-family: 'Poppins', sans-serif;
 }
