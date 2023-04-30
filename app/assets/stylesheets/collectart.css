@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(241, 107, 58);
+    background-image: linear-gradient(to bottom, rgb(194, 77, 35), rgb(198, 80, 100));
     color:rgb(182, 179, 244);
     font-family: 'Poppins', sans-serif;
 }
