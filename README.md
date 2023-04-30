@@ -1,6 +1,6 @@
 # COLLECTART
 Collectart is an app develped for people to share their art/craft works. It aims to connect people through the love of visual art. This site is, currently, open for any kinds of medium.
-## project on live [coming soon] (https://collectart.fly.dev/)
+## project on live [coming soon]
 ## MOTIVATION
 The aim of this project was to create a community where people who makes "art" can contribute and share their work within a safe space. The term artist is such a broad term and only the small percent of them can share their work in public eyes which can bring both positive and very  negative criticism to the artists. This project aims at creating a space where everyone can share their works, which may not have had a chance to be in public eyes, and inspire each other.
 ## ABOUT
